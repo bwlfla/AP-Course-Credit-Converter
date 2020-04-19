@@ -17,7 +17,7 @@ tableOfInfo=soup.find('table',summary='AP Exam')
 rows=tableOfInfo.find_all('tr')
 
 for row in rows:
-	apExamName=row.find()
+#	apExamName=row.find()
 	print(row)
 	print("Happiness")
 
