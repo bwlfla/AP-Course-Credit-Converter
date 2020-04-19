@@ -25,11 +25,17 @@ soup=BeautifulSoup(page.content,'html.parser')
 tableOfInfo=soup.find('table',summary='AP Exam')
 rows=tableOfInfo.find_all('tr')
 
-
-
+counter=1
 for row in rows:
-#	apExamName=row.find()
-	print(row)
-	print("Happiness")
+	if(counter>2):
+		apExamName=row.find('td',class_="column0").text.strip()
+		credit3=row.find('td',class_="column1").text.strip()
+		credit4=row.find('td',class_="column2").text.strip()
+		credit5=row.find('td',class_="column3").text.strip()
+		my_sheet['A'+(str(counter))]=apExamName
+		my_sheet['B'+(str(counter))]=credit3
+		my_sheet['C'+(str(counter))]=credit4
+		my_sheet['D'+(str(counter))]=credit5
+	counter=counter+1
 
 workbook.save(filePath+nameOfFile)
