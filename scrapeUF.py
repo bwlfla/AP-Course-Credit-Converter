@@ -13,7 +13,12 @@ url="https://catalog.ufl.edu/UGRD/academic-advising/exam-credit/#examstext"
 page=requests.get(url)
 soup=BeautifulSoup(page.content,'html.parser')
 
-results=soup.find_all('table',summary='AP Exam')
-print(results)
+tableOfInfo=soup.find('table',summary='AP Exam')
+rows=tableOfInfo.find_all('tr')
+
+for row in rows:
+	apExamName=row.find()
+	print(row)
+	print("Happiness")
 
 workbook.save(filePath+nameOfFile)
