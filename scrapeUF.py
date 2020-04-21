@@ -47,7 +47,7 @@ for row in rows:
 #saves the excel file at the filePath
 workbook.save(filePath+nameOfFile)
 
-'''Sources used:
+'''Sources referenced:
 https://www.analyticsvidhya.com/blog/2015/10/beginner-guide-web-scraping-beautiful-soup-python/
 https://realpython.com/beautiful-soup-web-scraper-python/
 '''
