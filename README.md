@@ -7,5 +7,7 @@ The following packages that need to be installed before the program is run are l
 bs4
 openpyxl
 requests
+pandas
+xlrd
 
 py scrapeUF.py will generate an excel file saved to a file location. Make sure to change the file path for it to work properly.
